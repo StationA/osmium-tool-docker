@@ -23,6 +23,6 @@ RUN git clone https://github.com/osmcode/osmium-tool.git
 
 WORKDIR /code/osmium-tool/build
 RUN cmake ..
-RUN make
+RUN make install
 
-ENTRYPOINT ["/code/osmium-tool/build/osmium"]
+ENTRYPOINT ["/usr/local/bin/osmium"]
