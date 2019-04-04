@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y \
     libosmium2-dev
 
 WORKDIR /code
-RUN git clone https://github.com/osmcode/osmium-tool.git
+RUN git clone --branch "v1.9.1" --depth 1 https://github.com/osmcode/osmium-tool.git
 
 WORKDIR /code/osmium-tool/build
 RUN cmake ..
